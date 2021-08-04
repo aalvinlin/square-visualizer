@@ -1,8 +1,8 @@
 import React from "react";
 
-const Grid = ({grid_width, squared_numbers}) => {
+const Grid = ({gridWidth, squaredNumbers}) => {
 
-    const rows = Math.floor(squared_numbers ** 2 / grid_width);
+    const rows = Math.floor(squaredNumbers ** 2 / gridWidth);
 
     return (
         <div id="grid">
