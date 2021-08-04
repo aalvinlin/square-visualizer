@@ -12,11 +12,16 @@ const Grid = ({gridWidth, squaredNumbers}) => {
         <div id="grid">
             {
                 cellArray.map((cell, id) => {
+                    
+                    // start counting from 1
+                    id += 1;
+                    const root = Math.sqrt(id);
+
                     // if perfect square, color it black
-                    if (Math.floor(Math.sqrt(id + 1)) ** 2 === id)
-                        { return <Cell id={id} color="black" />; }
+                    if (Math.floor(root) ** 2 === id)
+                        { return <Cell id={root} color="black" />; }
                     else
-                        { return <Cell id={id} color="white" />; }
+                        { return <Cell id={root} color="white" />; }
                 })
             }
         </div>
