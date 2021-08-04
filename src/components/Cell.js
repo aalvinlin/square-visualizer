@@ -1,8 +1,8 @@
 import React from "react";
 
-const Cell = ({row, col, color}) => {
+const Cell = ({id, color}) => {
     return (
-        <div id={`cell_${row}_${col}`} class={`cell_${color}`}></div>
+        <div id={`cell_${id}`} class={`cell_${color}`}></div>
     )
 }
 
