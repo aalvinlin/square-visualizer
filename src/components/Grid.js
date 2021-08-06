@@ -4,12 +4,11 @@ import Cell from "./Cell";
 const Grid = ({gridWidth, squaredNumbers}) => {
 
     const totalNumbers = squaredNumbers ** 2;
-    const rows = Math.floor(totalNumbers / gridWidth);
-
+    
     const cellArray = Array(totalNumbers).fill(0);
 
     return (
-        <div id="grid">
+        <div id="grid" style={{width: gridWidth * 10 + "px"}}>
             {
                 cellArray.map((cell, id) => {
                     
@@ -19,9 +18,9 @@ const Grid = ({gridWidth, squaredNumbers}) => {
 
                     // if perfect square, color it black
                     if (Math.floor(root) ** 2 === id)
-                        { return <Cell id={root} color="black" />; }
+                        { return <Cell key={`cell_${root}`} id={root} color="black" />; }
                     else
-                        { return <Cell id={root} color="white" />; }
+                        { return <Cell key={`cell_${root}`} id={root} color="white" />; }
                 })
             }
         </div>
