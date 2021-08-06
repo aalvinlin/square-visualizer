@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Controls gridWith={gridWidth} setGridWidth={setGridWidth} />
+      <Controls gridWidth={gridWidth} setGridWidth={setGridWidth} />
       <Grid gridWidth={gridWidth} squaredNumbers={squaredNumbers} />
     </>
   );
