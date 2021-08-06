@@ -7,6 +7,12 @@ body {
   align-items: flex-start;
 }
 
+#controls {
+  min-height: 100px;
+  height: 10vh;
+
+  width: 95vw;
+}
 
 #grid {
   margin: 0 auto;
